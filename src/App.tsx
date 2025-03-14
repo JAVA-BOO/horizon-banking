@@ -25,7 +25,7 @@ function App() {
           <Route path="dashboard" element={<DashboardLayout />}>
             <Route index element={<Home />} />
             <Route path="my-banks" element={<MyBanks />} />
-            <Route path="payments" element={<Payments />} />
+            <Route path="payment-transfer" element={<Payments />} />
             <Route path="transactions" element={<TransactionHistory />} />
             <Route path="connect-banks" element={<ConnectBank />} />
           </Route>
