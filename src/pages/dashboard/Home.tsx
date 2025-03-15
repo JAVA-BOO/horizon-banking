@@ -1,4 +1,4 @@
-import AccountsCard from "@/components/home-comps/AccountsCard";
+import AccountsCard from "@/components/dashboard-comps/home-comps/AccountsCard";
 import React from "react";
 
 export default function Home() {

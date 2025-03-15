@@ -1,4 +1,3 @@
-import React from "react";
 import PieChart from "@/assets/Pie-chart.png";
 export default function AccountsCard() {
   return (
