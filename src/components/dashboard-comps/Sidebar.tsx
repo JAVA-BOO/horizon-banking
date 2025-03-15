@@ -2,19 +2,14 @@ import { Link, useLocation } from "react-router";
 import Logo from "@/assets/horizon-logo.svg";
 import { LogOut, Search } from "lucide-react";
 import Avatar from "@/assets/jsmastery.png";
-import {
-  CardAdd,
-  DollarCircle,
-  Home2,
-  MoneySend,
-  ReceiptItem,
-} from "iconsax-react";
+
 import { cn } from "@/lib/utils";
+import { navMenu } from "@/utils/dashboard";
 
 export default function Sidebar() {
   const location = useLocation();
   return (
-    <aside className="flex h-screen w-[280px] flex-col justify-between border-r border-[#EAECF0] p-6">
+    <aside className="hidden h-screen w-full flex-col justify-between border-r border-[#EAECF0] p-6 md:flex">
       <div className="">
         <Link to="/dashboard" className="mb-6 block">
           <img src={Logo} alt="" />
@@ -49,7 +44,7 @@ export default function Sidebar() {
                   location.pathname === link.to && "*:stroke-white",
                 )}
               >
-                {link.icon}
+                <link.icon size={20} />
               </span>
               {link.name}
             </Link>
@@ -72,27 +67,3 @@ export default function Sidebar() {
     </aside>
   );
 }
-
-const navMenu = [
-  { name: "Home", to: "/dashboard", icon: <Home2 size="20" /> },
-  {
-    name: "My Banks",
-    to: "/dashboard/my-banks",
-    icon: <DollarCircle size="20" />,
-  },
-  {
-    name: "Transaction History",
-    to: "/dashboard/transactions",
-    icon: <ReceiptItem size="20" />,
-  },
-  {
-    name: "Payment Transfer",
-    to: "/dashboard/payment-transfer",
-    icon: <MoneySend size="20" />,
-  },
-  {
-    name: "Connect Bank",
-    to: "/dashboard/connect-banks",
-    icon: <CardAdd size="20" />,
-  },
-];

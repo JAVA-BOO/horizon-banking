@@ -3,9 +3,11 @@ import { Outlet } from "react-router";
 
 export default function DashboardLayout() {
   return (
-    <div>
+    <section className="grid grid-cols-[280px_1fr]">
       <Sidebar />
-      <Outlet />
-    </div>
+      <div className="px-4 py-6 md:px-8">
+        <Outlet />
+      </div>
+    </section>
   );
 }
